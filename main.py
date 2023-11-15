@@ -20,7 +20,7 @@ class EgyenletMegoldo():
     def feladat_megoldo(self, var_a, var_b, var_c):
         """feladatmegoldó, mai a másodfokú egyenlet megoldó eredményét írja ki"""
         e = EgyenletMegoldo()
-        x1, x2 = e.masodfokuEgyenletMegoldo(a, b, c)
+        x1, x2 = e.masodfokuEgyenletMegoldo(var_a, var_b, var_c)
 
         print(f"{var_a}x^2 + {var_b}x + {var_c} = 0")
 
