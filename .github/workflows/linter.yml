@@ -1,0 +1,15 @@
+name: Linter
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: arch-rolling
+    steps:
+    - uses: actions/checkout@v3
+    - name: PyLint telepítése
+      run: pacman -S python-pylint
+
+    - name: A linter.py futtatása egyedi .pylintrc feltételekkel
+      run: python linter.py
+      continue-on-error: false
