@@ -20,22 +20,19 @@ class EgyenletMegoldo():
     def feladat_megoldo(self, var_a, var_b, var_c):
         """feladatmegoldó, mai a másodfokú egyenlet megoldó eredményét írja ki"""
         e = EgyenletMegoldo()
-        x1, x2 = e.masodfokuEgyenletMegoldo(var_a, var_b, var_c)
+        x1, x2 = e.masodfokuEgyenletMegoldo(var_a, var_b, var_c )
 
         print(f"{var_a}x^2 + {var_b}x + {var_c} = 0")
 
         if (x1 is None) and (x2 is None):
-            return "Nincs megoldás"
+            print("Nincs megoldás")
         elif x1 == x2:
-            return f"Egy megoldás van: {x1}"
+            print(f"Egy megoldás van: {x1}")
         else:
-            return f"Két megoldás van: x1={x1}, x2={x2}"
+            print(f"Két megoldás van: x1={x1}, x2={x2}")
 
 #e = egyenletMegoldo()
 #e.feladatMegoldo(1, 2, 8)
 #e.feladatMegoldo(1, -14, 49)
 #e.feladatMegoldo(1, 6, 8)
 #e.feladatMegoldo("alma", 1, "körte")
-
-e = EgyenletMegoldo()
-print(e.feladatMegoldo(1, 2, 8))
