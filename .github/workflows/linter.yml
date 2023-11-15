@@ -4,11 +4,15 @@ on:
     branches: [ "main" ]
 jobs:
   build:
-    runs-on: arch-rolling
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+
+    - name: Arch Linux telepítése
+      run: curl -L https://github.com/zaoqi/github-actions-archlinux/raw/master/install.sh | sh
+    
     - name: PyLint telepítése
-      run: pacman -S python-pylint
+      run: pacman --noconfirm -Syu python-pylint
 
     - name: A linter.py futtatása egyedi .pylintrc feltételekkel
       run: python linter.py
