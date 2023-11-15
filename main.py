@@ -4,18 +4,18 @@ import math
 
 class EgyenletMegoldo():
     """ egyenlet megoldó osztály"""
-    def masodfoku_egyenlet_megoldo(self, a, b, c):
+    def masodfoku_egyenlet_megoldo(self, var_a, var_b, var_c):
         """ másodfokú egyenlet megoldó metódus"""
 
-        if type(a) not in [int, float] or type(b) not in [int, float] or type(c) not in [int, float]:
+        if type(var_a) not in [int, float] or type(var_b) not in [int, float] or type(var_c) not in [int, float]:
             raise TypeError('Csak int vagy float típus elfogadható!')
 
-        d = math.pow(b, 2) - (4 * a * c)
+        d = math.pow(var_b, 2) - (4 * var_a * var_c)
 
         if d < 0:
             return None, None
 
-        return (-b + math.sqrt(d)) / (2 * a), (-b - math.sqrt(d)) / (2 * a)
+        return (-var_b + math.sqrt(d)) / (2 * var_a), (-var_b - math.sqrt(d)) / (2 * var_a)
 
     def feladat_megoldo(self, a, b, c):
         """feladatmegoldó, mai a másodfokú egyenlet megoldó eredményét írja ki"""
