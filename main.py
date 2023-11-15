@@ -25,14 +25,17 @@ class EgyenletMegoldo():
         print(f"{var_a}x^2 + {var_b}x + {var_c} = 0")
 
         if (x1 is None) and (x2 is None):
-            print("Nincs megoldás")
+            return "Nincs megoldás"
         elif x1 == x2:
-            print(f"Egy megoldás van: {x1}")
+            return f"Egy megoldás van: {x1}"
         else:
-            print(f"Két megoldás van: x1={x1}, x2={x2}")
+            return f"Két megoldás van: x1={x1}, x2={x2}"
 
 #e = egyenletMegoldo()
 #e.feladatMegoldo(1, 2, 8)
 #e.feladatMegoldo(1, -14, 49)
 #e.feladatMegoldo(1, 6, 8)
 #e.feladatMegoldo("alma", 1, "körte")
+
+e = EgyenletMegoldo()
+print(e.feladatMegoldo(1, 2, 8))
